@@ -11,7 +11,7 @@ This repository holds the official implementation of TFE-DCN method presented in
 ![fig2](https://user-images.githubusercontent.com/122836421/212775057-a082fe70-14fb-4767-af15-27fc3516f065.png)
 
 # Dependencies
-* Create the anaconda environment as
+* Create the conda environment.
 
 ``` 
 ascd
