@@ -4,23 +4,35 @@
 
 This repository holds the official implementation of TFE-DCN method presented in WACV 2023.
 
-**Temporal Feature Enhancement Dilated Convolution Network for Weakly-supervised Temporal Action Localization.** Jianxiong Zhou, and Ying Wu. In *WACV*, 2023.
+[Jianxiong Zhou](https://scholar.google.com/citations?hl=zh-CN&user=_PCm9QEAAAAJ), and [Ying Wu](http://users.ece.northwestern.edu/~yingwu/). In *WACV*, 2023.
 
-
+# Introduction
+Weakly-supervised Temporal Action Localization (WTAL) aims to classify and localize action instances in untrimmed videos with only video-level labels. Existing methods typically use snippet-level RGB and optical flow features extracted from pre-trained extractors directly. Because of two limitations: the short temporal span of snippets and the inappropriate initial features, these WTAL methods suffer from the lack of effective use of temporal information and have limited performance. In this paper, we propose the Temporal Feature Enhancement Dilated Convolution Network (TFE-DCN) to address these two limitations. The proposed TFE-DCN has an enlarged receptive field that covers a long temporal span to observe the full dynamics of action instances, which makes it powerful to capture temporal dependencies between snippets. Furthermore, we propose the Modality Enhancement Module that can enhance RGB features with the help of enhanced optical flow features, making the overall features appropriate for the WTAL task. Experiments conducted on THUMOS’14 and ActivityNet v1.3 datasets show that our proposed approach far outperforms state-of-the-art WTAL methods.
 
 ![fig2](https://user-images.githubusercontent.com/122836421/212775057-a082fe70-14fb-4767-af15-27fc3516f065.png)
 
 # Dependencies
-* Create the conda environment.
+* Create the conda environment as what I used.
 
 ``` 
-ascd
+conda create -n TFEDCN python=3.6
+
+conda activate TFEDCN
+
+pip install -r requirements.txt
+
+pip install torch==1.5.0+cu101 torchvision==0.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
+
+pip install tqdm==4.41.1
+
+conda install matplotlib
 ``` 
 
-# Data Preparation
+# THUMOS'14 Dataset
+The feature for THUMOS'14 Dataset can be downloaded here. The annotations are included with this package.
 
 # Training
-
+* Run the train scripts:
 
 # Citation
 Please [★star] this repo and [cite] the following paper if you feel our TFE-DCN useful to your research:
