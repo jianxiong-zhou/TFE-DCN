@@ -42,7 +42,7 @@ The feature for THUMOS'14 Dataset can be downloaded here. The annotations are in
 # Training
 * Run the train scripts:
 ``` 
-python main.py --max-seqlen 320 --lr 0.00005 --k 7 --dataset-name Thumos14reduced --path-dataset ./dataset --num-class 20 --interval 100  --max-iter 3010  --dataset SampleDataset --weight_decay 0.001 --seed 1
+python main.py --max-seqlen 320 --lr 0.00005 --k 7 --dataset-name Thumos14reduced --path-dataset ./dataset --num-class 20 --interval 200  --max-iter 3010  --dataset SampleDataset --weight_decay 0.001 --seed 1
 
 ``` 
 
