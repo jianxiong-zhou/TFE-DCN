@@ -48,7 +48,7 @@ We referenced the following repos for the code:
 # Citation
 Please [★star] this repo and [cite] the following paper if you feel our TFE-DCN useful to your research:
 ```
-@InProceedings{pardo_2021_refineloc,
+@InProceedings{jianxiong_2023_wacv,
   title={Temporal Feature Enhancement Dilated Convolution Network for Weakly-Supervised Temporal Action Localization},
   author={Zhou, Jianxiong and Wu, Ying},
   booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of 
