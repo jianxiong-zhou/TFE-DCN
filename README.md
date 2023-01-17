@@ -54,11 +54,11 @@ We referenced the following repos for the code:
 # Citation
 Please [★star] this repo and [cite] the following paper if you feel our TFE-DCN useful to your research:
 ```
-@InProceedings{jianxiong_2023_wacv,
+@inproceedings{zhou2023temporal,
   title={Temporal Feature Enhancement Dilated Convolution Network for Weakly-Supervised Temporal Action Localization},
   author={Zhou, Jianxiong and Wu, Ying},
-  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of 
-             Computer Vision (WACV)},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+  pages={6028--6037},
   year={2023}
 }
 ```
