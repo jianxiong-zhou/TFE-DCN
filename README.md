@@ -37,8 +37,6 @@ The feature for THUMOS'14 Dataset can be downloaded here. The annotations are in
 
 * [Google Drive](https://drive.google.com/file/d/1YLmbv_6bd696iN_5UdknP_gadNTytbSM/view?usp=share_link)
 
-* [Baidu Netdisk](https://pan.baidu.com/s/1gw5NQbN1E6_lIRj_BRJNLQ) (Password:1234)
-
 # Training
 * Run the train scripts:
 ``` 
