@@ -24,10 +24,6 @@ class Modality_Enhancement_Module(torch.nn.Module):
         embed_dim = 1024
         self.channel_conv1 = nn.Sequential(nn.AdaptiveAvgPool1d(1),nn.Conv1d(n_feature, embed_dim, 3, padding=1),nn.LeakyReLU(0.2),nn.Dropout(0.5))
         
-        
-        self.channel_conv2 = nn.Sequential(nn.AdaptiveAvgPool1d(1),nn.Conv1d(n_feature, embed_dim, 3, padding=1),nn.LeakyReLU(0.2),nn.Dropout(0.5))
-        
-        
         self.attention = nn.Sequential(nn.Conv1d(embed_dim, 512, 3, padding=1),
                                        nn.LeakyReLU(0.2),
                                        nn.Dropout(0.5),
@@ -38,7 +34,7 @@ class Modality_Enhancement_Module(torch.nn.Module):
         self.channel_avg=nn.AdaptiveAvgPool1d(1)
     def forward(self,vfeat,ffeat):
         channel_attn = self.channel_conv1(vfeat)
-        bit_wise_attn = self.channel_conv2(ffeat)
+        bit_wise_attn = self.channel_conv1(ffeat)
         
         filter_feat = torch.sigmoid(channel_attn)*torch.sigmoid(bit_wise_attn)*vfeat
         
@@ -99,7 +95,7 @@ class TFE_DC_Module(nn.Module):
         out_feature = torch.sigmoid(out)*x
         out_attention3 = self.attention(out_feature)
         
-        out_attention = out_attention3
+        out_attention = (out_attention1+out_attention2+out_attention3)/3.0
         
         
         return out_attention, out_feature

@@ -11,11 +11,11 @@ parser.add_argument('--num-class', type=int,default=20, help='number of classes 
 parser.add_argument('--dataset-name', default='Thumos14reduced', help='dataset to train on (default: )')
 parser.add_argument('--max-seqlen', type=int, default=320, help='maximum sequence length during training (default: 750)')
 parser.add_argument('--num-similar', default=3, type=int,help='number of similar pairs in a batch of data  (default: 3)')
-parser.add_argument('--seed', type=int, default=3552, help='random seed (default: 1)')
+parser.add_argument('--seed', type=int, default=1, help='random seed (default: 1)')
 parser.add_argument('--max-iter', type=int, default=20000, help='maximum iteration to train (default: 50000)')
 parser.add_argument('--feature-type', type=str, default='I3D', help='type of feature to be used I3D or UNT (default: I3D)')
 parser.add_argument('--use-model',type=str, default='TFEDCN',help='model used to train the network')
-parser.add_argument('--interval', type=int, default=200,help='time interval of performing the test')
+parser.add_argument('--interval', type=int, default=10,help='time interval of performing the test')
 parser.add_argument('--similar-size', type=int, default=2)
 
 parser.add_argument('--weight_decay', type=float, default=5e-4)
