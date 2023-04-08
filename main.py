@@ -63,7 +63,7 @@ if __name__ == '__main__':
    for itr in tqdm(range(args.max_iter)):
       loss = train(itr, dataset, args, model, optimizer, logger, device)
       total_loss+=loss
-      if itr > 1599 and itr % args.interval == 0 and not itr == 0:
+      if itr > 1299 and itr % args.interval == 0 and not itr == 0:
          print('Iteration: %d, Loss: %.5f' %(itr, total_loss/args.interval))
          total_loss = 0
          torch.save(model.state_dict(), './ckpt/last_' + args.model_name + '.pkl')
